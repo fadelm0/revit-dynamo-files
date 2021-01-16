@@ -1,2 +1,3 @@
-# revit_dynamo
-Files related to dynamo and revit
+# Revit Dynamo Files
+
+This contains useful files related to dynamo and revit
