@@ -25,12 +25,15 @@ clr.AddReference('System')
 from System.Collections.Generic import List as cList
 
 # Ilist Application
-New_List = cList[ElementId]("elements")
+#New_List = cList[ElementId]("elements") 
+
+### commented out above because currently throws an error:
+### TypeError: Error in IEnumeratorOfTWrapper.Current. Could not cast: Autodesk.Revit.DB.ElementId in System.Char
 
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
-app = uiapp.Application
 uiapp = DocumentManager.Instance.CurrentUIApplication
+app = uiapp.Application
 
 # Function to convert input to list if it is not a list + unwrap it
 def toList(x):
@@ -50,8 +53,4 @@ TransactionManager.Instance.TransactionTaskDone()
 # <element>.ToDSType(True), #Not created in script, mark as Revit-owned
 # <element>.ToDSType(False) #Created in script, mark as non-Revit-owned
 
-OUT = element
-
-
-#### Things to add
-# ways to handle input with multiple list levels. this was encountered before somewhere. find it and add it
+OUT = input_element
