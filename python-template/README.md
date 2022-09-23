@@ -3,6 +3,6 @@
 To use the python template by default in newly created dynamo python nodes, add the following line (with indent) to the DynamoSettings.xml file located in
 `%Appdata%\Dynamo\Dynamo Revit\[version number]`
 ```
-  <PythonTemplateFilePath>%appdata%\Dynamo\Dynamo Revit\2.6\DynamoPythonTemplate.py</PythonTemplateFilePath>
+  <PythonTemplateFilePath>%appdata%\Dynamo\Dynamo Revit\<dynamo version>\DynamoPythonTemplate.py</PythonTemplateFilePath>
 ```
-replacing the existing `<PythonTemplateFilePath />`
+replacing the existing `<PythonTemplateFilePath />` line
